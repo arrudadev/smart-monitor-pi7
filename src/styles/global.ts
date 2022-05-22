@@ -2,21 +2,18 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --white: #FFFFFF;
+    --background: #181B23;
+    --background-light: #1F2029;
 
-    --green: #32B768;
-    --green-dark: #2B7A4B;
-    --green-light: #DAF2E4;
+    --text: #EEEEF2;
 
-    --gray: #CFCFCF;
-    --gray-dark: #52665A;
-    --gray-light: #F0F0F0;
+    --primary: #38A169;
   }
 
   html {
       font-family: Roboto, sans-serif;
-      background: var(--white);
-      color: var(--gray);
+      background: var(--background);
+      color: var(--text);
   }
 
   blockquote,
