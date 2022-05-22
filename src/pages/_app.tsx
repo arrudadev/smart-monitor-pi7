@@ -5,13 +5,14 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from '../styles/global';
 import theme from '../styles/theme';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
+
       <Component {...pageProps} />
     </ThemeProvider>
   );
-}
+};
 
-export default MyApp;
+export default App;
