@@ -78,5 +78,6 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/jsx-no-bind': 'off',
     'react/no-typos': 'off',
+    'import/no-anonymous-default-export': 'off',
   },
 };
