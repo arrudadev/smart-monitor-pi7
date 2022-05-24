@@ -79,5 +79,6 @@ module.exports = {
     'react/jsx-no-bind': 'off',
     'react/no-typos': 'off',
     'import/no-anonymous-default-export': 'off',
+    'react/require-default-props': 'off',
   },
 };
