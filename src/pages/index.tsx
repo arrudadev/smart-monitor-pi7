@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
@@ -30,5 +30,14 @@ const Login: NextPage = () => (
     </Container>
   </Main>
 );
+
+export const getStaticProps: GetStaticProps = () => {
+  return {
+    redirect: {
+      destination: '/dashboard',
+      permanent: true,
+    },
+  };
+};
 
 export default Login;
