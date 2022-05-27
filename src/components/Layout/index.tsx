@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 import { Header } from '../Header';
-import { Sidebar } from '../Sidebar';
+// import { Sidebar } from '../Sidebar';
 import { Container, Content, Section, Main } from './styles';
 
 type LayoutProps = {
@@ -14,7 +14,7 @@ export const Layout = ({ children }: LayoutProps) => (
       <Header />
 
       <Section>
-        <Sidebar />
+        {/* <Sidebar /> */}
 
         <Content>{children}</Content>
       </Section>

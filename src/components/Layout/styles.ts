@@ -29,7 +29,7 @@ export const Content = styled.div`
   display: flex;
   flex: 1;
 
-  @media (min-width: 530px) {
+  /* @media (min-width: 530px) {
     padding-left: 3rem;
-  }
+  } */
 `;
