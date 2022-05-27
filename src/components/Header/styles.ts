@@ -47,9 +47,14 @@ export const AppName = styled.h1`
 
   margin-left: 1rem;
 
-  @media (max-width: 530px) {
+  @media (max-width: 350px) {
     display: none;
   }
+`;
+
+export const MenuWrapper = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const Profile = styled.div`
@@ -57,7 +62,7 @@ export const Profile = styled.div`
   align-items: flex-end;
   flex-direction: column;
 
-  @media (max-width: 530px) {
+  @media (max-width: 560px) {
     display: none;
   }
 `;
@@ -78,7 +83,9 @@ export const MenuICon = styled(FiMenu)`
   height: 42px;
   width: 42px;
 
-  @media (min-width: 530px) {
+  margin-left: 1rem;
+
+  /* @media (min-width: 530px) {
     display: none;
-  }
+  } */
 `;

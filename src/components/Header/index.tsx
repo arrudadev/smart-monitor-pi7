@@ -6,11 +6,12 @@ import {
   Container,
   Logo,
   LogoWrapper,
-  MenuICon,
-  Profile,
+  // MenuICon,
+  // MenuWrapper,
+  // Profile,
   StyledHeader,
-  UserEmail,
-  UserName,
+  // UserEmail,
+  // UserName,
   Wrapper,
 } from './styles';
 
@@ -32,13 +33,15 @@ export const Header = () => {
               <AppName>Smart Monitor</AppName>
             </LogoWrapper>
 
-            <Profile>
-              <UserName>Alexandre Monteiro</UserName>
+            {/* <MenuWrapper>
+              <Profile>
+                <UserName>Alexandre Monteiro</UserName>
 
-              <UserEmail>alexandre.monteiro.bec@gmail.com</UserEmail>
-            </Profile>
+                <UserEmail>alexandre.monteiro.bec@gmail.com</UserEmail>
+              </Profile>
 
-            <MenuICon onClick={handleToggleDrawer} />
+              <MenuICon onClick={handleToggleDrawer} />
+            </MenuWrapper> */}
           </Wrapper>
         </Container>
       </StyledHeader>
