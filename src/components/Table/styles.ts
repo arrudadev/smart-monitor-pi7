@@ -31,3 +31,11 @@ export const StyledTable = styled.table`
     padding: 1rem;
   }
 `;
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 1rem 0;
+`;

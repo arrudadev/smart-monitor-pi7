@@ -1,4 +1,5 @@
-import { Container, StyledTable } from './styles';
+import { Pagination } from '../Pagination';
+import { Container, PaginationWrapper, StyledTable } from './styles';
 
 export const Table = () => {
   return (
@@ -62,6 +63,10 @@ export const Table = () => {
           </tr>
         </tbody>
       </StyledTable>
+
+      <PaginationWrapper>
+        <Pagination />
+      </PaginationWrapper>
     </Container>
   );
 };
