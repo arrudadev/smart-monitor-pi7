@@ -10,6 +10,7 @@ import { HeartBeatsChart } from '../../components/HeartBeatsChart';
 import { Layout } from '../../components/Layout';
 import { Spo2Chart } from '../../components/Spo2Chart';
 import { StatCard } from '../../components/StatCard';
+import { Table } from '../../components/Table';
 import {
   ChartTableHeader,
   ChartTableItem,
@@ -116,7 +117,7 @@ const Dashboard: NextPage = () => {
           </ChartTableWrapper>
         )}
 
-        {visualization === 'table' && <h1>table</h1>}
+        {visualization === 'table' && <Table />}
       </Container>
     </Layout>
   );
