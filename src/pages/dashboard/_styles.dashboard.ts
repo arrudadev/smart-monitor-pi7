@@ -104,4 +104,6 @@ export const FilterItem = styled.div`
   }
 `;
 
-export const ChartTableWrapper = styled.div``;
+export const ChartTableWrapper = styled.div`
+  margin-bottom: 3rem;
+`;

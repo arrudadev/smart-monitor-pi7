@@ -103,21 +103,23 @@ const Dashboard: NextPage = () => {
           </FilterWrapper>
         </ChartTableHeader>
 
-        {visualization === 'chart' && (
-          <ChartTableWrapper>
-            <HeartBeatsChart />
+        <ChartTableWrapper>
+          {visualization === 'chart' && (
+            <>
+              <HeartBeatsChart />
 
-            <Spo2Chart />
+              <Spo2Chart />
 
-            <BodyTemperatureChart />
+              <BodyTemperatureChart />
 
-            <HeartBeatsChart />
+              <HeartBeatsChart />
 
-            <HeartBeatsChart />
-          </ChartTableWrapper>
-        )}
+              <HeartBeatsChart />
+            </>
+          )}
 
-        {visualization === 'table' && <Table />}
+          {visualization === 'table' && <Table />}
+        </ChartTableWrapper>
       </Container>
     </Layout>
   );
