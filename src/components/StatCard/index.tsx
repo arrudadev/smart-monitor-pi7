@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Container, Title, Value } from './styles';
+import { Container, InfoIcon, Title, Value } from './styles';
 
 type StatCardProps = {
   icon: ReactNode;
@@ -11,6 +11,8 @@ type StatCardProps = {
 export const StatCard = ({ icon, title, value }: StatCardProps) => (
   <Container>
     {icon}
+
+    <InfoIcon />
 
     <Title>{title}</Title>
 

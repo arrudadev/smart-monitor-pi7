@@ -1,3 +1,5 @@
+import { MdOutlineInfo } from 'react-icons/md';
+
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -13,6 +15,8 @@ export const Container = styled.div`
   background-color: var(--background-light);
 
   border-radius: 8px;
+
+  position: relative;
 `;
 
 export const Title = styled.h1`
@@ -31,4 +35,15 @@ export const Value = styled.span`
   text-align: center;
 
   margin-top: 1rem;
+`;
+
+export const InfoIcon = styled(MdOutlineInfo)`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  height: 25px;
+  width: 25px;
+
+  cursor: pointer;
 `;
