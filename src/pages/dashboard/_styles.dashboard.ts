@@ -103,3 +103,5 @@ export const FilterItem = styled.div`
     color: var(--text);
   }
 `;
+
+export const ChartTableWrapper = styled.div``;

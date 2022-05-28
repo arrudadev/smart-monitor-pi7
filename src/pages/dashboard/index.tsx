@@ -1,10 +1,14 @@
+import { useState } from 'react';
 import { AiOutlineAreaChart } from 'react-icons/ai';
 import { FaTable } from 'react-icons/fa';
-import { RiHeartPulseFill } from 'react-icons/ri';
+import { RiH1, RiHeartPulseFill } from 'react-icons/ri';
 
 import type { NextPage } from 'next';
 
+import { BodyTemperatureChart } from '../../components/BodyTemperatureChart';
+import { HeartBeatsChart } from '../../components/HeartBeatsChart';
 import { Layout } from '../../components/Layout';
+import { Spo2Chart } from '../../components/Spo2Chart';
 import { StatCard } from '../../components/StatCard';
 import {
   ChartTableHeader,
@@ -12,6 +16,7 @@ import {
   ChartTableToogle,
   ChartTableToogleTitle,
   ChartTableToogleWrapper,
+  ChartTableWrapper,
   Container,
   Filter,
   FilterItem,
@@ -21,74 +26,100 @@ import {
   Title,
 } from './_styles.dashboard';
 
-const Dashboard: NextPage = () => (
-  <Layout>
-    <Container>
-      <Title>Dashboard</Title>
+const Dashboard: NextPage = () => {
+  const [visualization, setVisualization] = useState('chart');
 
-      <StatsGrid>
-        <StatCard
-          title="Batimentos Cardiacos"
-          value="89"
-          icon={<RiHeartPulseFill color="red" size={48} />}
-        />
+  return (
+    <Layout>
+      <Container>
+        <Title>Dashboard</Title>
 
-        <StatCard
-          title="Spo2"
-          value="89"
-          icon={<RiHeartPulseFill color="red" size={48} />}
-        />
+        <StatsGrid>
+          <StatCard
+            title="Batimentos Cardiacos"
+            value="89"
+            icon={<RiHeartPulseFill color="red" size={48} />}
+          />
 
-        <StatCard
-          title="Temperatura Corporal"
-          value="89"
-          icon={<RiHeartPulseFill color="red" size={48} />}
-        />
+          <StatCard
+            title="Spo2"
+            value="89"
+            icon={<RiHeartPulseFill color="red" size={48} />}
+          />
 
-        <StatCard
-          title="Temperatura no ambiente"
-          value="89"
-          icon={<RiHeartPulseFill color="red" size={48} />}
-        />
+          <StatCard
+            title="Temperatura Corporal"
+            value="89"
+            icon={<RiHeartPulseFill color="red" size={48} />}
+          />
 
-        <StatCard
-          title="Umidade no ambiente"
-          value="89"
-          icon={<RiHeartPulseFill color="red" size={48} />}
-        />
-      </StatsGrid>
+          <StatCard
+            title="Temperatura no ambiente"
+            value="89"
+            icon={<RiHeartPulseFill color="red" size={48} />}
+          />
 
-      <ChartTableHeader>
-        <ChartTableToogleWrapper>
-          <ChartTableToogleTitle>Visualização</ChartTableToogleTitle>
+          <StatCard
+            title="Umidade no ambiente"
+            value="89"
+            icon={<RiHeartPulseFill color="red" size={48} />}
+          />
+        </StatsGrid>
 
-          <ChartTableToogle>
-            <ChartTableItem className="active">
-              <AiOutlineAreaChart size={24} />
-            </ChartTableItem>
+        <ChartTableHeader>
+          <ChartTableToogleWrapper>
+            <ChartTableToogleTitle>Visualização</ChartTableToogleTitle>
 
-            <ChartTableItem>
-              <FaTable size={24} />
-            </ChartTableItem>
-          </ChartTableToogle>
-        </ChartTableToogleWrapper>
+            <ChartTableToogle>
+              <ChartTableItem
+                className={`${visualization === 'chart' ? 'active' : ''}`}
+                onClick={() => setVisualization('chart')}
+              >
+                <AiOutlineAreaChart size={24} />
+              </ChartTableItem>
 
-        <FilterWrapper>
-          <FilterTitle>Filtros</FilterTitle>
+              <ChartTableItem
+                className={`${visualization === 'table' ? 'active' : ''}`}
+                onClick={() => setVisualization('table')}
+              >
+                <FaTable size={24} />
+              </ChartTableItem>
+            </ChartTableToogle>
+          </ChartTableToogleWrapper>
 
-          <Filter>
-            <FilterItem className="active">30</FilterItem>
+          <FilterWrapper>
+            <FilterTitle>Filtros</FilterTitle>
 
-            <FilterItem>15</FilterItem>
+            <Filter>
+              <FilterItem className="active">30</FilterItem>
 
-            <FilterItem>7</FilterItem>
+              <FilterItem>15</FilterItem>
 
-            <FilterItem>3</FilterItem>
-          </Filter>
-        </FilterWrapper>
-      </ChartTableHeader>
-    </Container>
-  </Layout>
-);
+              <FilterItem>7</FilterItem>
+
+              <FilterItem>3</FilterItem>
+            </Filter>
+          </FilterWrapper>
+        </ChartTableHeader>
+
+        {visualization === 'chart' && (
+          <ChartTableWrapper>
+            <HeartBeatsChart />
+
+            <Spo2Chart />
+
+            <BodyTemperatureChart />
+
+            <HeartBeatsChart />
+
+            <HeartBeatsChart />
+          </ChartTableWrapper>
+        )}
+
+        {visualization === 'table' && <h1>table</h1>}
+      </Container>
+    </Layout>
+  );
+};
 
 export default Dashboard;
