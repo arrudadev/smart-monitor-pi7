@@ -40,30 +40,35 @@ const Dashboard: NextPage = () => {
             title="Batimentos Cardiacos"
             value="89"
             icon={<RiHeartPulseFill color="red" size={48} />}
+            description="teste"
           />
 
           <StatCard
             title="Spo2"
             value="89"
             icon={<RiHeartPulseFill color="red" size={48} />}
+            description="teste"
           />
 
           <StatCard
             title="Temperatura Corporal"
             value="89"
             icon={<RiHeartPulseFill color="red" size={48} />}
+            description="teste"
           />
 
           <StatCard
             title="Temperatura no ambiente"
             value="89"
             icon={<RiHeartPulseFill color="red" size={48} />}
+            description="teste"
           />
 
           <StatCard
             title="Umidade no ambiente"
             value="89"
             icon={<RiHeartPulseFill color="red" size={48} />}
+            description="teste"
           />
         </StatsGrid>
 
