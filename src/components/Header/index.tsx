@@ -6,6 +6,7 @@ import {
   Container,
   Logo,
   LogoWrapper,
+  ReloadIcon,
   // MenuICon,
   // MenuWrapper,
   // Profile,
@@ -42,6 +43,8 @@ export const Header = () => {
 
               <MenuICon onClick={handleToggleDrawer} />
             </MenuWrapper> */}
+
+            <ReloadIcon />
           </Wrapper>
         </Container>
       </StyledHeader>

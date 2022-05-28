@@ -1,4 +1,5 @@
 import { FiMenu } from 'react-icons/fi';
+import { IoReloadSharp } from 'react-icons/io5';
 import { RiHeartPulseLine } from 'react-icons/ri';
 
 import styled from 'styled-components';
@@ -88,4 +89,9 @@ export const MenuICon = styled(FiMenu)`
   /* @media (min-width: 530px) {
     display: none;
   } */
+`;
+
+export const ReloadIcon = styled(IoReloadSharp)`
+  height: 32px;
+  width: 32px;
 `;
