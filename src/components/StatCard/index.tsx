@@ -8,6 +8,7 @@ type StatCardProps = {
   title: string;
   value: string;
   description: string;
+  referenceLink: string;
 };
 
 export const StatCard = ({
@@ -15,6 +16,7 @@ export const StatCard = ({
   title,
   value,
   description,
+  referenceLink,
 }: StatCardProps) => {
   const [modalDisplayed, setModalDisplayed] = useState(false);
 
@@ -34,6 +36,7 @@ export const StatCard = ({
         <Modal
           title={title}
           description={description}
+          referenceLink={referenceLink}
           onClose={() => setModalDisplayed(false)}
         />
       )}

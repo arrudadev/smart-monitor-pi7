@@ -6,15 +6,22 @@ import {
   Header,
   Overlay,
   Title,
+  ToLearnAbout,
 } from './styles';
 
 type ModalProps = {
   title: string;
   description: string;
+  referenceLink: string;
   onClose: () => void;
 };
 
-export const Modal = ({ title, description, onClose }: ModalProps) => {
+export const Modal = ({
+  title,
+  description,
+  referenceLink,
+  onClose,
+}: ModalProps) => {
   return (
     <>
       <Overlay />
@@ -25,6 +32,13 @@ export const Modal = ({ title, description, onClose }: ModalProps) => {
         </Header>
 
         <Description>{description}</Description>
+
+        <ToLearnAbout>
+          Para saber mais veja{' '}
+          <a href={referenceLink} target="_blank" rel="noreferrer">
+            aqui
+          </a>
+        </ToLearnAbout>
 
         <Footer>
           <CloseButton onClick={onClose}>Fechar</CloseButton>

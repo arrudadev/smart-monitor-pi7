@@ -39,8 +39,15 @@ export const Title = styled.h1`
 `;
 
 export const Description = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
+
+  margin-top: 1rem;
+`;
+
+export const ToLearnAbout = styled.p`
+  font-size: 14px;
+  font-weight: 500;
 
   margin-top: 1rem;
 `;
