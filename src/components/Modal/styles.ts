@@ -17,11 +17,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  position: absolute;
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
 
   z-index: 101;
-
-  width: 95%;
 
   padding: 3rem;
 
@@ -61,11 +61,12 @@ export const CloseButton = styled.button`
 
   color: var(--text);
 
-  height: 32px;
+  height: 48px;
 
   padding: 1rem;
 
   border-radius: 8px;
+  border: none;
 
   background-color: var(--background);
 `;
