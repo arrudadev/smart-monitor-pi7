@@ -17,51 +17,51 @@ export const Table = () => {
 
         <tbody>
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td data-label="Batimentos Cardiacos">1</td>
+            <td data-label="Spo2">1</td>
+            <td data-label="Temperatura Corporal">1</td>
+            <td data-label="Temperatura no Ambiente">1</td>
+            <td data-label="Umidade no Ambiente">1</td>
           </tr>
 
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td data-label="Batimentos Cardiacos">1</td>
+            <td data-label="Spo2">1</td>
+            <td data-label="Temperatura Corporal">1</td>
+            <td data-label="Temperatura no Ambiente">1</td>
+            <td data-label="Umidade no Ambiente">1</td>
           </tr>
 
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td data-label="Batimentos Cardiacos">1</td>
+            <td data-label="Spo2">1</td>
+            <td data-label="Temperatura Corporal">1</td>
+            <td data-label="Temperatura no Ambiente">1</td>
+            <td data-label="Umidade no Ambiente">1</td>
           </tr>
 
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td data-label="Batimentos Cardiacos">1</td>
+            <td data-label="Spo2">1</td>
+            <td data-label="Temperatura Corporal">1</td>
+            <td data-label="Temperatura no Ambiente">1</td>
+            <td data-label="Umidade no Ambiente">1</td>
           </tr>
 
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td data-label="Batimentos Cardiacos">1</td>
+            <td data-label="Spo2">1</td>
+            <td data-label="Temperatura Corporal">1</td>
+            <td data-label="Temperatura no Ambiente">1</td>
+            <td data-label="Umidade no Ambiente">1</td>
           </tr>
 
           <tr>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td data-label="Batimentos Cardiacos">1</td>
+            <td data-label="Spo2">1</td>
+            <td data-label="Temperatura Corporal">1</td>
+            <td data-label="Temperatura no Ambiente">1</td>
+            <td data-label="Umidade no Ambiente">1</td>
           </tr>
         </tbody>
       </table>
