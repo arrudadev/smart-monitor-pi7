@@ -44,7 +44,7 @@ export const Header = () => {
               <MenuICon onClick={handleToggleDrawer} />
             </MenuWrapper> */}
 
-            <ReloadIcon />
+            {/* <ReloadIcon /> */}
           </Wrapper>
         </Container>
       </StyledHeader>

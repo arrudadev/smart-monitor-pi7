@@ -1,3 +1,5 @@
+import { IoReloadSharp } from 'react-icons/io5';
+
 import styled from 'styled-components';
 
 export const Container = styled.section`
@@ -5,6 +7,12 @@ export const Container = styled.section`
   flex-direction: column;
 
   width: 100%;
+`;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const Title = styled.h1`
@@ -106,4 +114,11 @@ export const FilterItem = styled.div`
 
 export const ChartTableWrapper = styled.div`
   margin-bottom: 3rem;
+`;
+
+export const ReloadIcon = styled(IoReloadSharp)`
+  height: 32px;
+  width: 32px;
+
+  cursor: pointer;
 `;

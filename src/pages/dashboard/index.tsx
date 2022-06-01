@@ -25,17 +25,23 @@ import {
   FilterItem,
   FilterTitle,
   FilterWrapper,
+  ReloadIcon,
   StatsGrid,
   Title,
+  TitleWrapper,
 } from './_styles.dashboard';
 
 const Dashboard: NextPage = () => {
-  const [visualization, setVisualization] = useState('chart');
+  // const [visualization, setVisualization] = useState('chart');
 
   return (
     <Layout>
       <Container>
-        <Title>Dashboard</Title>
+        <TitleWrapper>
+          <Title>Dashboard</Title>
+
+          <ReloadIcon />
+        </TitleWrapper>
 
         <StatsGrid>
           <StatCard
@@ -79,7 +85,7 @@ const Dashboard: NextPage = () => {
           />
         </StatsGrid>
 
-        <ChartTableHeader>
+        {/* <ChartTableHeader>
           <ChartTableToogleWrapper>
             <ChartTableToogleTitle>Visualização</ChartTableToogleTitle>
 
@@ -113,9 +119,9 @@ const Dashboard: NextPage = () => {
               <FilterItem>3</FilterItem>
             </Filter>
           </FilterWrapper>
-        </ChartTableHeader>
+        </ChartTableHeader> */}
 
-        <ChartTableWrapper>
+        {/* <ChartTableWrapper>
           {visualization === 'chart' && (
             <>
               <HeartBeatsChart />
@@ -131,7 +137,9 @@ const Dashboard: NextPage = () => {
           )}
 
           {visualization === 'table' && <Table />}
-        </ChartTableWrapper>
+        </ChartTableWrapper> */}
+
+        <Table />
       </Container>
     </Layout>
   );

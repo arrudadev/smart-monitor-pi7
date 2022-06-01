@@ -1,16 +1,18 @@
 import { Pagination } from '../Pagination';
-import { Container, PaginationWrapper, StyledTable } from './styles';
+import { Container, PaginationWrapper } from './styles';
 
 export const Table = () => {
   return (
     <Container>
-      <StyledTable>
+      <table>
         <thead>
-          <th>Batimentos Cardiacos</th>
-          <th>Spo2</th>
-          <th>Temperatura Corporal</th>
-          <th>Temperatura no Ambiente</th>
-          <th>Umidade no Ambiente</th>
+          <tr>
+            <th>Batimentos Cardiacos</th>
+            <th>Spo2</th>
+            <th>Temperatura Corporal</th>
+            <th>Temperatura no Ambiente</th>
+            <th>Umidade no Ambiente</th>
+          </tr>
         </thead>
 
         <tbody>
@@ -62,11 +64,11 @@ export const Table = () => {
             <td>1</td>
           </tr>
         </tbody>
-      </StyledTable>
+      </table>
 
-      <PaginationWrapper>
+      {/* <PaginationWrapper>
         <Pagination />
-      </PaginationWrapper>
+      </PaginationWrapper> */}
     </Container>
   );
 };
