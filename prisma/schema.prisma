@@ -15,7 +15,6 @@ datasource db {
 
 model Stats {
   id               Int @id @default(autoincrement())
-  date             DateTime @default(now())
   heart_beats      Int
   spo2             Int
   body_temperature Int
