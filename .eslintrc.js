@@ -80,5 +80,6 @@ module.exports = {
     'react/no-typos': 'off',
     'import/no-anonymous-default-export': 'off',
     'react/require-default-props': 'off',
+    'no-return-await': 'off',
   },
 };
