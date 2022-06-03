@@ -9,7 +9,7 @@ import {
   Headline,
   Logo,
   Main,
-} from './_styles.login';
+} from '../styles/pages/login';
 
 const Login: NextPage = () => (
   <Main>

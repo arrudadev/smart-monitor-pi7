@@ -31,7 +31,7 @@ import {
   StatsGrid,
   Title,
   TitleWrapper,
-} from './_styles.dashboard';
+} from '../../styles/pages/dashboard';
 
 type ResponseData = {
   data: Stats[];
