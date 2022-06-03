@@ -8,7 +8,7 @@ async function handleGetStats(
   request: NextApiRequest,
   response: NextApiResponse,
 ) {
-  const stats = await prisma.stats.findMany();
+  const stats = (await prisma.stats.findMany()).reverse();
 
   return response.status(200).json({
     data: stats,
