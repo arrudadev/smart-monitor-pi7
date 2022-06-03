@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next';
+import type { GetServerSideProps, NextPage } from 'next';
 
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
@@ -31,7 +31,7 @@ const Login: NextPage = () => (
   </Main>
 );
 
-export const getStaticProps: GetStaticProps = () => {
+export const getServerSideProps: GetServerSideProps = async () => {
   return {
     redirect: {
       destination: '/dashboard',
