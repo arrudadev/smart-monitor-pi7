@@ -73,9 +73,7 @@ const Dashboard: NextPage = () => {
 
           <StatCard
             title="Spo2"
-            value={`${
-              stats.length > 0 ? stats[stats.length - 1].heart_beats : '0'
-            } %`}
+            value={`${stats.length > 0 ? stats[stats.length - 1].spo2 : '0'} %`}
             icon={<MdOutlineBloodtype color="brown" size={48} />}
             description="A saturação do oxigênio é um parâmetro vital para definir o índice de oxigênio do sangue e a entrega do oxigênio. Para adultos, a escala normal do SpO2 é 95 – 100%. Um valor mais baixo de 90% é considerado a baixa saturação do oxigênio, que exige o suplemento externo do oxigênio."
             referenceLink="https://prolife.com.br/o-que-e-saturacao-de-oxigenio-e-qual-o-valor-minimo-do-spo2/#:~:text=A%20satura%C3%A7%C3%A3o%20do%20oxig%C3%AAnio%20%C3%A9,o%20suplemento%20externo%20do%20oxig%C3%AAnio."
@@ -84,7 +82,7 @@ const Dashboard: NextPage = () => {
           <StatCard
             title="Temperatura Corporal"
             value={`${
-              stats.length > 0 ? stats[stats.length - 1].heart_beats : '0'
+              stats.length > 0 ? stats[stats.length - 1].body_temperature : '0'
             } º`}
             icon={<FaTemperatureHigh color="#963832" size={48} />}
             description="A temperatura corpórea considerada ideal varia entre 36º C e 36,7º C. Geralmente, ela é mais baixa pela manhã e mais alta no fim da tarde ou à noite. Alterações de até um grau podem ser absolutamente aceitáveis em condições normais. Nas mulheres, por exemplo, após a ovulação, durante o ciclo menstrual e no primeiro trimestre da gravidez, ocorre uma elevação natural da temperatura."
@@ -94,7 +92,7 @@ const Dashboard: NextPage = () => {
           <StatCard
             title="Temperatura no ambiente"
             value={`${
-              stats.length > 0 ? stats[stats.length - 1].heart_beats : '0'
+              stats.length > 0 ? stats[stats.length - 1].env_temperature : '0'
             } º`}
             icon={<FaTemperatureLow color="green" size={48} />}
             description="Segundo a NR17, do Ministério do Trabalho, a temperatura do ambiente de trabalho onde são executadas atividades intelectuais como nos laboratórios, escritórios, sala de desenvolvimento e projetos, deve ficar entre 20 e 23 graus centígrados"
@@ -104,7 +102,7 @@ const Dashboard: NextPage = () => {
           <StatCard
             title="Umidade no ambiente"
             value={`${
-              stats.length > 0 ? stats[stats.length - 1].heart_beats : '0'
+              stats.length > 0 ? stats[stats.length - 1].env_humidity : '0'
             } %`}
             icon={<WiHumidity color="blue" size={72} />}
             description="Segundo NR17, do Ministério do Trabalho define, então, que a temperatura no ambiente de trabalho deve ser entre 20 e 23 graus celsius, enquanto a umidade relativa do ar não pode ser menor do que 40%."
