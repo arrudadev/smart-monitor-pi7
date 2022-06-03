@@ -1,7 +1,13 @@
+import { Stats } from '@prisma/client';
+
 import { Pagination } from '../Pagination';
 import { Container, PaginationWrapper } from './styles';
 
-export const Table = () => {
+type TableProps = {
+  rows: Stats[];
+};
+
+export const Table = ({ rows }: TableProps) => {
   return (
     <Container>
       <table>
@@ -16,53 +22,17 @@ export const Table = () => {
         </thead>
 
         <tbody>
-          <tr>
-            <td data-label="Batimentos Cardiacos">1</td>
-            <td data-label="Spo2">1</td>
-            <td data-label="Temperatura Corporal">1</td>
-            <td data-label="Temperatura no Ambiente">1</td>
-            <td data-label="Umidade no Ambiente">1</td>
-          </tr>
-
-          <tr>
-            <td data-label="Batimentos Cardiacos">1</td>
-            <td data-label="Spo2">1</td>
-            <td data-label="Temperatura Corporal">1</td>
-            <td data-label="Temperatura no Ambiente">1</td>
-            <td data-label="Umidade no Ambiente">1</td>
-          </tr>
-
-          <tr>
-            <td data-label="Batimentos Cardiacos">1</td>
-            <td data-label="Spo2">1</td>
-            <td data-label="Temperatura Corporal">1</td>
-            <td data-label="Temperatura no Ambiente">1</td>
-            <td data-label="Umidade no Ambiente">1</td>
-          </tr>
-
-          <tr>
-            <td data-label="Batimentos Cardiacos">1</td>
-            <td data-label="Spo2">1</td>
-            <td data-label="Temperatura Corporal">1</td>
-            <td data-label="Temperatura no Ambiente">1</td>
-            <td data-label="Umidade no Ambiente">1</td>
-          </tr>
-
-          <tr>
-            <td data-label="Batimentos Cardiacos">1</td>
-            <td data-label="Spo2">1</td>
-            <td data-label="Temperatura Corporal">1</td>
-            <td data-label="Temperatura no Ambiente">1</td>
-            <td data-label="Umidade no Ambiente">1</td>
-          </tr>
-
-          <tr>
-            <td data-label="Batimentos Cardiacos">1</td>
-            <td data-label="Spo2">1</td>
-            <td data-label="Temperatura Corporal">1</td>
-            <td data-label="Temperatura no Ambiente">1</td>
-            <td data-label="Umidade no Ambiente">1</td>
-          </tr>
+          {rows?.map?.(row => (
+            <tr key={row.id}>
+              <td data-label="Batimentos Cardiacos">{row.heart_beats}</td>
+              <td data-label="Spo2">{row.spo2}</td>
+              <td data-label="Temperatura Corporal">{row.body_temperature}</td>
+              <td data-label="Temperatura no Ambiente">
+                {row.env_temperature}
+              </td>
+              <td data-label="Umidade no Ambiente">{row.env_humidity}</td>
+            </tr>
+          ))}
         </tbody>
       </table>
 
